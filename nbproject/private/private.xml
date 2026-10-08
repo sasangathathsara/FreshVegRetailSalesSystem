@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/CategoryDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/CustomerDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/CustomerPaymentDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/InventoryDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/SaleDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/SaleDetailDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/model/Category.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/dao/UserDAO.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/view/SalesFrame.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/model/Sale.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/model/SaleDetail.java</file>
+            <file>file:/C:/Users/Achintha/Documents/NetBeansProjects/FreshVegRetailSalesSystem/src/model/CustomerPayment.java</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SalesReport" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="48ef27b3-a85b-4608-adcd-5fefe40b2cbd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    s.sale_id,
+    s.invoice_no,
+    s.sale_date,
+    c.customer_name,
+    p.product_name,
+    sd.unit,
+    sd.quantity,
+    sd.unit_price,
+    sd.line_total,
+    s.gross_amount,
+    s.discount_amount,
+    s.net_amount,
+    s.paid_amount,
+    s.outstanding_amount,
+    s.payment_status
+FROM sales s
+JOIN customers c
+    ON s.customer_id = c.customer_id
+JOIN sale_details sd
+    ON s.sale_id = sd.sale_id
+JOIN products p
+    ON sd.product_id = p.product_id
+ORDER BY
+    s.sale_date DESC,
+    s.sale_id DESC,
+    sd.sale_detail_id;]]>
+	</queryString>
+	<field name="sale_id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="sale_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="sale_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="invoice_no" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="invoice_no"/>
+		<property name="com.jaspersoft.studio.field.label" value="invoice_no"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="sale_date" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="sale_date"/>
+		<property name="com.jaspersoft.studio.field.label" value="sale_date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="customer_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="customer_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customers"/>
+	</field>
+	<field name="product_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="product_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="product_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="products"/>
+	</field>
+	<field name="unit" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="unit"/>
+		<property name="com.jaspersoft.studio.field.label" value="unit"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sale_details"/>
+	</field>
+	<field name="quantity" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="quantity"/>
+		<property name="com.jaspersoft.studio.field.label" value="quantity"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sale_details"/>
+	</field>
+	<field name="unit_price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="unit_price"/>
+		<property name="com.jaspersoft.studio.field.label" value="unit_price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sale_details"/>
+	</field>
+	<field name="line_total" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="line_total"/>
+		<property name="com.jaspersoft.studio.field.label" value="line_total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sale_details"/>
+	</field>
+	<field name="gross_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="gross_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="gross_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="discount_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="discount_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="discount_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="net_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="net_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="net_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="paid_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="paid_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="paid_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="outstanding_amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="outstanding_amount"/>
+		<property name="com.jaspersoft.studio.field.label" value="outstanding_amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<field name="payment_status" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="payment_status"/>
+		<property name="com.jaspersoft.studio.field.label" value="payment_status"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="sales"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="24" width="100" height="30" uuid="1f4b2db6-742a-417a-b3eb-00694f7209e5"/>
+				<text><![CDATA[SALES REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="21" width="100" height="30" uuid="52d28e22-4810-4829-80d9-1323ea0e7b31"/>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="20" width="100" height="30" uuid="31100a3f-a974-45ea-b074-1036a3b56ef5"/>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="20" width="100" height="30" uuid="c516ab1c-0317-438e-ad03-fda63b38bb74"/>
+				<text><![CDATA[Customer]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="20" width="100" height="30" uuid="cd4f987b-686a-426a-8464-56605bbf88b3"/>
+				<text><![CDATA[Product]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="447" y="20" width="100" height="30" uuid="c9b15ed0-f5bd-4dad-a6ed-d16ba0870dec"/>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="100" height="30" uuid="ef8e390b-eaa6-46da-bc68-303c4dd32ecc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0179f981-cfd7-45e8-809c-0c7811b6d781"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{invoice_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="30" width="100" height="30" uuid="4e8449a3-98e1-4969-8560-57a720038061">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="864534fe-6be8-433e-b731-760260d07d59"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{sale_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="30" width="100" height="30" uuid="c0d80069-096b-4b28-9a1d-59bbb07c5795">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4825beed-a33a-4aa9-82c2-492a36907a18"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="335" y="30" width="100" height="30" uuid="e08b4d78-b600-4bcd-aeed-f00d9684683e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7f740e3-ef69-47d9-801c-188b22d86334"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{product_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="447" y="30" width="100" height="30" uuid="1ef118b8-6f3c-4acc-a200-d3e3967006c2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a22f90d6-9eb3-4cb5-a54b-9f717ae94b0b"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{line_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
